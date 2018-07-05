@@ -1,29 +1,31 @@
 
 let count = 0;
-let timercount = 0;
 
-let click = document.querySelector(".click");
+let click = document.querySelector("#click");
 let h3 = document.querySelector("h3");
 
-let timer = setInterval(function() {
-    timercount +=1;
-},3000);
 
-// $(document).ready(function() {
-//     $("h1").click(
-//         function() {
-//             count == 15 ? count=0 : count+=1;
-//             $("#mycount").text(count);
-//             $(this).toggleClass("JToggle");
-//         }
-//     );
-// }) 
+let timer = setInterval(hide,1500);
 
+function hide() {
+    count +=1;
+    h3.textContent = count;
 
-timercount > 5 ? click.classList.add("hideelement") : timercount;
+    $("#click").click(function() {
+        clearInterval(1);
+        $(this).css({"color" : "red"});
+    }) 
+
+    if(count==5) 
+    {
+        click.classList.add("hideelement");
+        clearInterval(1);
+    }
+}
 
 timer;
-h3.textContent = timercount;
-hide();
+
+
+
 
 
