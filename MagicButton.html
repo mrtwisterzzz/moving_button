@@ -1,19 +1,35 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
     <head>
-        <title>Magic Button</title>
+        <title>Poetry-yuc217</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="MagicButton.css" rel="stylesheet">
-
-          
-    </head> 
-
+    </head>
     <body>
-        <h3>Time remaining: <span></span></h3>
-        <h1 id="click">Click me before time runs out and I disappear!!</h1>
+        <h1>Just click me</h1>
+        <div class="container">
+            <button type="button" url="Invitation.html" style=" margin-left: 0px; margin-top: 0px;">this</button>
+               
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+   
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
-        <script src="MagicButton.js"></script>
+        <script>
+            $('button').on('click', function(){     
+                window.location.href = $(this).attr('url');
+            });
+        </script>
     </body>
+
 </html>

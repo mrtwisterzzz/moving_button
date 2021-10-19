@@ -1,26 +1,50 @@
-
-
-.JToggle {
-    color: red;
-}
-
-@keyframes mylink {
+@keyframes move {
     0% {
+        top: 0px;
         left: 0px;
-        top: 15px;
-    } 
-
-    50% {
-        left: 0px;
-        top: 500px;
-    } 
-
-    100% {
-        left: 100px;
-        top: 15px;
     }
-} 
-
-.hideelement {
-    visibility: hidden;
+    25%{
+        top:500px;
+        left: 500px;
+    }
+    50%{
+        top: 60px;
+        left: 900px;
+    }
+    75%{
+        top: 20px;
+        left: 500px;
+    }
+    100% {
+        top: 20px;
+        left: 20px;
+    }
 }
+
+
+            
+            button {
+                width: 50px;
+                height: 20px;
+                border-radius: 10px;
+                background-color: #d42929;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                animation: move 6s linear alternate infinite; 
+            }
+
+            h1{
+                color: blue;
+
+            }
+
+            .invite{
+                text-align: center; 
+                width: 600px;
+                height: 800px;
+                border-radius: 10px;
+                background-color: #d42929;
+            }
